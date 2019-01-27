@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.chetan.daggerapplication.MyProjectApplication
 import com.chetan.daggerapplication.R
-import com.chetan.daggerapplication.di.EmployeeModule
 import com.chetan.daggerapplication.di.OfficeModule
 import com.chetan.daggerapplication.models.OfficeDetail
 import kotlinx.android.synthetic.main.activity_office.*
@@ -18,7 +17,7 @@ class OfficeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_office)
         val officeComponent =
-            (application as MyProjectApplication).appComponent.addOfficeComponent(OfficeModule())
+            (application as MyProjectApplication).appComponent.addOfficeSubComponent(OfficeModule())
         officeComponent.injectAt(this)
         populateOfficeDetail()
     }

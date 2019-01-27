@@ -8,8 +8,8 @@ import javax.inject.Singleton
 
 @Component(modules = arrayOf(AppModule::class))
 interface AppComponent {
-    fun addEmployeeComponent(module: EmployeeModule): EmployeeComponent
-    fun addOfficeComponent(module: OfficeModule): OfficeComponent
+    fun addEmployeeSubComponent(module: EmployeeModule): EmployeeSubComponent
+    fun addOfficeSubComponent(module: OfficeModule): OfficeSubComponent
 }
 
 @Module

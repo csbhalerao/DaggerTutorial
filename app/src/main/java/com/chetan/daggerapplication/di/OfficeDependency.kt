@@ -9,7 +9,7 @@ import dagger.Subcomponent
 
 @EmployeeScope
 @Subcomponent(modules = [OfficeModule::class])
-interface OfficeComponent {
+interface OfficeSubComponent {
     fun injectAt(activity: OfficeActivity)
 }
 

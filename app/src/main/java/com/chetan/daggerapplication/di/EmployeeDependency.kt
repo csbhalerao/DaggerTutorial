@@ -12,7 +12,7 @@ import dagger.Subcomponent
 
 @EmployeeScope
 @Subcomponent(modules = [EmployeeModule::class])
-interface EmployeeComponent {
+interface EmployeeSubComponent {
     fun injectAt(activity: EmployeeActivity)
 }
 

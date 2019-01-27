@@ -1,7 +1,6 @@
 package com.chetan.daggerapplication.employee
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
 import com.chetan.daggerapplication.MyProjectApplication
 import com.chetan.daggerapplication.R
@@ -19,7 +18,7 @@ class EmployeeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_employee)
 
         val employeeComponent =
-            (application as MyProjectApplication).appComponent.addEmployeeComponent(EmployeeModule())
+            (application as MyProjectApplication).appComponent.addEmployeeSubComponent(EmployeeModule())
         employeeComponent.injectAt(this)
         populateEmployeeDetail()
     }
@@ -29,5 +28,4 @@ class EmployeeActivity : AppCompatActivity() {
         textEmployeeAddress.text = "Employee Address: ${employeeDetail.address.address}"
         textEmployeeEmail.text = "Employee Email: ${employeeDetail.contactDetails.email}"
     }
-
 }
