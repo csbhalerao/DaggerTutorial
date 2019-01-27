@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dagger Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_employee">EmployeeActivity</string>
+    <string name="text_employee_detail">EmployeeDetail</string>
+    <string name="text_office_detail">Office Detail</string>
+</resources>
